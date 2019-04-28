@@ -73,13 +73,13 @@ void cohensutterland(double x0,double y0,double x1, double Y1)
             }
         }
     } while (!done);
-        glColor3f(1.0,0.0,0.0);
-        glBegin(GL_LINE_LOOP);
-            glVertex2f(xvmin,yvmin);
-            glVertex2f(xvmax,yvmin);
-            glVertex2f(xvmax,yvmax);
-            glVertex2f(xvmin,yvmax);
-        glEnd();
+    glColor3f(1.0,0.0,0.0);
+    glBegin(GL_LINE_LOOP);
+        glVertex2f(xvmin,yvmin);
+        glVertex2f(xvmax,yvmin);
+        glVertex2f(xvmax,yvmax);
+        glVertex2f(xvmin,yvmax);
+    glEnd();
     if(accept)
     {
         double sx = (xvmax-xvmin)/(xmax-xmin);
@@ -108,12 +108,12 @@ outcode computecode(double x,double y)
 
 void display()
 {
-     glClear(GL_COLOR_BUFFER_BIT);
-        glColor3f(1.0,0.0,0.0);
-        glBegin(GL_LINES);
+    glClear(GL_COLOR_BUFFER_BIT);
+    glColor3f(1.0,0.0,0.0);
+    glBegin(GL_LINES);
         glVertex2d(X0,Y0);
         glVertex2d(X1,Y1);
-        glEnd();
+    glEnd();
     glColor3f(0.0,0.0,1.0);
     glBegin(GL_LINE_LOOP);
         glVertex2f(xmin,ymin);
